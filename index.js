@@ -57,7 +57,8 @@ function removeFromCart(item) {
     var eleObj = cart[i];
 
     if (eleObj.itemName === item) {
-      return cart.slice(0, i) + cart.slice(i + 1);
+      cart.splice(i, 1);
+      return cart; 
     }
   }
   return "That item is not in your cart.";
