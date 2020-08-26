@@ -16,7 +16,7 @@ function addToCart(item) {
  item.itemPrice = price;
 
  cart.push(item);
- return;
+ return `${item.itemName} has been added to your cart`;
 }
 
 function viewCart() {
@@ -36,7 +36,7 @@ function viewCart() {
       cartStr += `and ${cartEle.itemName} at $${cartEle.itemPrice}.`
     }
     }
-  return cartStr; 
+  return cartStr;
 }
 
 function total() {
