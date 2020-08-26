@@ -58,7 +58,7 @@ function removeFromCart(item) {
 
     if (eleObj.itemName === item) {
       cart.splice(i, 1);
-      return cart; 
+      return cart;
     }
   }
   return "That item is not in your cart.";
@@ -66,4 +66,12 @@ function removeFromCart(item) {
 
 function placeOrder(cardNumber) {
   // write your code here
+  if (cardNumber === undefined) {
+    return "Sorry, we don't have a credit card on file for you.";
+  } else {
+    var total = total();
+    return `Your total cost is $${total}, which will be charged to the card ${cardNumber}.`
+
+
+  }
 }
